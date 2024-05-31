@@ -1,0 +1,169 @@
+.contenedor-form {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    color: #000000;
+
+    form {
+        border: 1px solid rgb(155, 155, 155);
+        border-radius: 10px;
+        background-color: white;
+        color: #000;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #000000;
+            color: #fff;
+        }
+
+        .info {
+            padding: 20px;
+
+            input {
+                width: 400px;
+                height: 25px;
+                border-radius: 5px;
+                border: 1px solid;
+                padding: 5px;
+                border: 1px solid rgb(155, 155, 155);
+                transition: border-color 0.3s ease-in-out;
+
+                &:focus {
+                    border-color: #000000;
+                    outline: none;
+                }
+            }
+
+            textarea {
+                width: 400px;
+                height: 120px;
+                border-radius: 5px;
+                border: 1px solid;
+                padding: 5px;
+                resize: none;
+                border: 1px solid rgb(155, 155, 155);
+
+                &:focus {
+                    border-color: #1e1f22;
+                    outline: none;
+                }
+            }
+
+            button {
+                background-color: #000000;
+                padding: 5px;
+                border-radius: 10px;
+                margin: 5px;
+                width: 200px;
+                color: #fff;
+                border: 2px solid rgb(255, 255, 255);
+                cursor: pointer;
+
+                &:hover {
+                    border: 2px solid #000000;
+                    background-color: #fff;
+                    color: #000000;
+                }
+            }
+        }
+
+        .hay-resultados-if {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                background-color: #ffcbcb;
+                border: 1px solid #ff0000;
+                text-align: center;
+                border-radius: 5px;
+                color: #ff4343;
+                width: 350px;
+            }
+        }
+
+        .hay-enviar-if {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                background-color: #dbf1ff;
+                border: 1px solid #5fc2ff;
+                text-align: center;
+                border-radius: 5px;
+                color: #26acff;
+            }
+        }
+    }
+}
+
+.container-list {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid rgb(155, 155, 155);
+    border-radius: 10px;
+    margin: 40px;
+    margin-top: 0;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        td {
+            text-align: left;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            button {
+                background-color: #000000;
+                padding: 5px 10px;
+                border-radius: 5px;
+                margin: 0 5px;
+                color: #fff;
+                border: 2px solid transparent;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000000;
+                    border: 2px solid #000000;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-form {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contenedor-main .contenedor-form form .info input {
+        width: 250px;
+    }
+
+    .contenedor-main .contenedor-form form .info textarea {
+        width: 250px;
+        height: 170px;
+    }
+}

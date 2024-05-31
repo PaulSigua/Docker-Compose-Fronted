@@ -1,0 +1,59 @@
+<!--Codigo HTML del componente--><!--Codigo HTML del componente-->
+<div class="contenedor-main">
+
+    <div class="contenedor-form">
+
+        <form action="" (ngSubmit)="guardarMensaje(nombreUsuario, correo, mensajeUsuario)">
+
+            <h2>Enviar un mensaje</h2>
+
+            <div class="info">
+
+                <label for="">Ingrese su nombre</label><br>
+                <input type="text" placeholder="nombre" #nombreUsuario><br>
+
+                <label for="">Ingrese su correo electrónico</label><br>
+                <input type="text" placeholder="correo" #correo><br>
+
+                <label for="">Ingrese su mensaje</label><br>
+                <textarea type="text" name="" id="" placeholder="mensaje" #mensajeUsuario></textarea><br>
+
+                <button type="submit">{{editMode ? 'Actualizar' : 'Enviar'}}</button>
+
+            </div>
+            <div class="hay-resultados-if" *ngIf="hayResultados">
+                <h4>Ocurrio un error</h4>
+            </div>
+
+            <div class="hay-enviar-if" *ngIf="mensajeCorrecto">
+                <h4>¡Su mensaje fue enviado de manera correcta!</h4>
+            </div>
+        </form>
+    </div>
+
+    <div class="container-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Mensaje</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of mensajes | async">
+                    <td>{{m.codigo}}</td>
+                    <td>{{m.nombre}}</td>
+                    <td>{{m.correo}}</td>
+                    <td>{{m.mensaje}}</td>
+                    <td>
+                        <button (click)="editarMensaje(m)">Editar</button>
+                        <button (click)="eliminarMensaje(m.codigo)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
